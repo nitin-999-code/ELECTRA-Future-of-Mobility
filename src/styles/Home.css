@@ -1,0 +1,398 @@
+.home {
+  width: 100vw;
+  padding: 2rem 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  width: 100%;
+  padding: 0 5%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.search-box {
+  display: flex;
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-button {
+  padding: 0 1.5rem;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+  color: #000;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0 25px 25px 0;
+}
+
+.search-button:hover {
+  background: linear-gradient(90deg, #00b8e0, #2a6bc4);
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  width: 100%;
+}
+
+.car-info {
+  flex: 1;
+  max-width: 50%;
+}
+
+.car-info h1 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.car-model h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.car-model p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.car-stats {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.car-details {
+  margin: 2rem 0;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-item span:first-child {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.detail-item span:last-child {
+  font-weight: 600;
+}
+
+.explore-button {
+  background: none;
+  border: 2px solid #00d2ff;
+  color: #00d2ff;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+  background: #00d2ff;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+}
+
+.car-visual1 {
+  flex: 1.2; 
+  position: relative;
+  width: 100%;
+  min-width: 55%; 
+  margin-top: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  
+}
+
+.car-image {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.battery-maintenance {
+  padding: 5rem 5%;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 3rem auto;
+  max-width: 1200px;
+  border-radius: 15px;
+}
+
+.maintenance-content {
+  display: flex;
+  gap: 3rem;
+  align-items: stretch;
+  min-height: 500px;
+}
+
+.maintenance-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.maintenance-image {
+  flex: 1;
+  display: flex;
+}
+
+.battery-img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.battery-maintenance h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.battery-maintenance h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+}
+
+.maintenance-point {
+  margin-bottom: 2rem;
+}
+
+.maintenance-point h3 {
+  font-size: 1.3rem;
+  color: #00d2ff;
+  margin-bottom: 0.5rem;
+}
+
+.maintenance-point p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* New EV Benefits Section Styles */
+.ev-benefits {
+  padding: 5rem 5%;
+  background: linear-gradient(135deg, #000000, #0a0a2a);
+  color: #fff;
+  width: 100%;
+}
+
+.benefits-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ev-benefits h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.ev-benefits h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+}
+
+.benefits-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 210, 255, 0.1);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.benefit-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.benefit-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  
+  .car-info {
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+  
+  .car-visual {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .car-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .battery-maintenance .maintenance-content {
+    flex-direction: column;
+  }
+  
+  .maintenance-image {
+    margin-top: 2rem;
+    justify-content: center;
+  }
+  
+  .battery-maintenance h2,
+  .ev-benefits h2 {
+    font-size: 2rem;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .car-info h1 {
+    font-size: 2rem;
+  }
+  
+  .car-model h2 {
+    font-size: 1.8rem;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .explore-button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .battery-maintenance {
+    padding: 3rem 5%;
+  }
+  
+  .maintenance-point h3 {
+    font-size: 1.1rem;
+  }
+  
+  .maintenance-point p {
+    font-size: 0.9rem;
+  }
+}
