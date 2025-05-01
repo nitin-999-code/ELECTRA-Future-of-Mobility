@@ -154,7 +154,7 @@ const ExploreMore = () => {
       </div>
       <div className="explore-more-container">
         <div className="explore-header">
-          <h1>Upcoming ElectricVehicles</h1>
+          <h1>All ElectricVehicles</h1>
         </div>
 
         <div className="upcoming-cars-grid">
