@@ -144,7 +144,7 @@ const ExploreMore = () => {
         <div className="search-box">
           <input
             type="text"
-            placeholder="Find job..."
+            placeholder="Find Electric Vehicle..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="search-input"
