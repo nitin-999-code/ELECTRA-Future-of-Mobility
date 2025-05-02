@@ -22,6 +22,7 @@ const CarShowcase = () => {
   const [upcomingIndex, setUpcomingIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
+  
 
   const cars = [
     {
@@ -247,7 +248,11 @@ const CarShowcase = () => {
               style={{ transform: `translateX(-${upcomingIndex * 25}%)` }}
             >
               {upcomingCars.map((car, index) => (
-                <div key={index} className="upcoming-slide">
+                <div 
+                  key={index} 
+                  className="upcoming-slide"
+                  style={{ width: `${100 / upcomingCars.length}%` }}
+                >
                   <div className="upcoming-card">
                     <div className="upcoming-image-container">
                       <img src={car.image} alt={car.name} className="upcoming-car-image" />

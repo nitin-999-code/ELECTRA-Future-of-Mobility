@@ -390,3 +390,14 @@
       padding: 0.5rem;
     }
   }
+  .upcoming-slider-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background: rgba(0, 210, 255, 0.2);
+    transform: none;
+  }
+  
+  .upcoming-slider-track {
+    will-change: transform;
+    transition: transform 0.5s ease;
+  }

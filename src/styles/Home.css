@@ -7,75 +7,25 @@
 
 .hero-section {
   width: 100%;
-  padding: 0 5%;
-  margin: 0 auto;
+  padding: 0px;
+  margin-left: 80px;
   display: flex;
-  flex-direction: column;
-}
-
-.search-container {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  position: relative;
-  z-index: 10;
-}
-
-.search-box {
-  display: flex;
-  width: 100%;
-  border-radius: 25px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.search-input {
-  flex: 1;
-  padding: 0.8rem 1rem;
-  border: none;
-  background: transparent;
-  color: white;
-  font-size: 1rem;
-  outline: none;
-}
-
-.search-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.search-button {
-  padding: 0 1.5rem;
-  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
-  color: #000;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 0 25px 25px 0;
-}
-
-.search-button:hover {
-  background: linear-gradient(90deg, #00b8e0, #2a6bc4);
+  min-height: 80vh; 
+  align-items: center;
 }
 
 .content-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 3rem;
   width: 100%;
-}
-
-.car-info {
-  flex: 1;
-  max-width: 50%;
 }
 
 .car-info h1 {
   font-size: 3.5rem;
   margin-bottom: 2rem;
+  margin-top:50px ;
   background: linear-gradient(90deg, #fff, #aaa);
   -webkit-background-clip: text;
   background-clip: text;
@@ -161,18 +111,18 @@
   flex: 1.2; 
   position: relative;
   width: 100%;
-  min-width: 55%; 
-  margin-top: 50px; 
+  min-width: 56%; 
+  margin-top: 20px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 200px;
   
 }
 
 .car-image {
   width: 100%;
-  max-width: 1200px;
+  max-width: 12000px;
   height: 100%;
   object-fit: contain;
 }
@@ -245,7 +195,7 @@
   line-height: 1.6;
 }
 
-/* New EV Benefits Section Styles */
+
 .ev-benefits {
   padding: 5rem 5%;
   background: linear-gradient(135deg, #000000, #0a0a2a);

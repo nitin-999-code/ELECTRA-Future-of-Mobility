@@ -14,7 +14,7 @@ const TestDriveForm = ({ onClose, onSubmit }) => {
     model: '',
     time: '',
     date: '',
-    comments: ''
+    comments:''
   });
 
   const handleChange = (e) => {
@@ -96,9 +96,9 @@ const TestDriveForm = ({ onClose, onSubmit }) => {
                 <label>Select Model *</label>
                 <select name="model" value={formData.model} onChange={handleChange} required>
                   <option value="">Select Model</option>
-                  <option value="IONIQ 5">IONIQ 5</option>
-                  <option value="Tucson">Tucson</option>
-                  <option value="Kona Electric">Kona Electric</option>
+                  <option value="Porche Eission E">Porche Eission E</option>
+                  <option value="Tucson">Tesla Cybertruk</option>
+                  <option value="Kona Electric">Rimac Navera</option>
                 </select>
               </div>
             </div>
