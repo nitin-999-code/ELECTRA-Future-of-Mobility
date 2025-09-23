@@ -12,42 +12,42 @@ const Features = () => {
     {
       title: "Autonomous Driving",
       description: "Level 4 autonomous driving capabilities for stress-free journeys",
-      icon: "🤖",
+      icon: "",
       image: feature1,
       color: "#00d2ff"
     },
     {
       title: "Biometric Access",
       description: "Facial recognition and fingerprint authentication for keyless entry",
-      icon: "👁️",
+      icon: "",
       image: feature2,
       color: "#3a7bd5"
     },
     {
       title: "Augmented Reality HUD",
       description: "Critical information projected onto your windshield for safer driving",
-      icon: "👓",
+      icon: "",
       image: feature3,
       color: "#00c6ff"
     },
     {
       title: "Vehicle-to-Grid Tech",
       description: "Sell excess energy back to the grid when your car is parked",
-      icon: "🔌",
+      icon: "",
       image: feature4,
       color: "#11998e"
     },
     {
       title: "Regenerative Braking",
       description: "Recover up to 30% more energy during deceleration",
-      icon: "🔄",
+      icon: "",
       image: feature5,
       color: "#38ef7d"
     },
     {
       title: "AI Personal Assistant",
       description: "An intelligent assistant that learns your preferences and habits",
-      icon: "🧠",
+      icon: "",
       image: feature6,
       color: "#f46b45"
     }
