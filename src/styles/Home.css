@@ -275,25 +275,127 @@
   font-size: 0.95rem;
 }
 
+/* Responsive Design Improvements */
+@media (max-width: 1200px) {
+  .hero-section {
+    margin-left: 40px;
+    padding: 2rem 0;
+  }
+  
+  .content-wrapper {
+    gap: 2rem;
+  }
+  
+  .car-info h1 {
+    font-size: 3rem;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 1024px) {
+  .hero-section {
+    margin-left: 0;
+    padding: 2rem 3%;
+    min-height: 70vh;
+  }
+  
   .content-wrapper {
     flex-direction: column;
+    text-align: center;
   }
   
   .car-info {
     max-width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   
   .car-visual {
     margin-top: 0;
+    order: -1;
+  }
+  
+  .car-info h1 {
+    font-size: 2.8rem;
+    margin-top: 0;
+  }
+  
+  .car-stats {
+    justify-content: center;
+  }
+  
+  .maintenance-content {
+    gap: 2rem;
+  }
+  
+  .battery-maintenance {
+    padding: 3rem 3%;
+  }
+  
+  .ev-benefits {
+    padding: 3rem 3%;
   }
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 1.5rem 2%;
+    min-height: 60vh;
+  }
+  
+  .car-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .car-model h2 {
+    font-size: 2rem;
+  }
+  
   .car-stats {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .stat-item {
+    flex: 1;
+    min-width: 80px;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.7rem;
+  }
+  
+  .car-details {
+    margin: 1.5rem 0;
+  }
+  
+  .detail-item {
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .explore-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .car-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .battery-maintenance {
+    padding: 2rem 2%;
+    margin: 2rem auto;
   }
   
   .battery-maintenance .maintenance-content {
@@ -305,44 +407,169 @@
     justify-content: center;
   }
   
+  .battery-img {
+    max-width: 100%;
+  }
+  
   .battery-maintenance h2,
   .ev-benefits h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .maintenance-point {
+    margin-bottom: 1.5rem;
+  }
+  
+  .maintenance-point h3 {
+    font-size: 1.2rem;
+  }
+  
+  .maintenance-point p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .ev-benefits {
+    padding: 2rem 2%;
   }
   
   .benefits-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .benefit-card {
+    padding: 1.5rem;
+  }
+  
+  .benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 480px) {
+  .hero-section {
+    padding: 1rem 2%;
+    min-height: 50vh;
+  }
+  
   .car-info h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
   
   .car-model h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .car-model p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .car-stats {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+  }
+  
+  .stat-item {
+    flex: none;
+  }
+  
+  .stat-value {
     font-size: 1.8rem;
+  }
+  
+  .stat-label {
+    font-size: 0.65rem;
+  }
+  
+  .car-details {
+    margin: 1rem 0;
   }
   
   .detail-item {
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.2rem;
+    padding: 0.5rem 0;
+    font-size: 0.85rem;
+    text-align: left;
+  }
+  
+  .detail-item span:first-child {
+    font-weight: 600;
   }
   
   .explore-button {
     width: 100%;
     text-align: center;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
   }
   
   .battery-maintenance {
-    padding: 3rem 5%;
+    padding: 1.5rem 2%;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+  }
+  
+  .battery-maintenance h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .maintenance-point {
+    margin-bottom: 1.2rem;
   }
   
   .maintenance-point h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
   }
   
   .maintenance-point p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .ev-benefits {
+    padding: 1.5rem 2%;
+  }
+  
+  .ev-benefits h2 {
+    font-size: 1.4rem;
+  }
+  
+  .benefits-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .benefits-grid {
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .benefit-card {
+    padding: 1.2rem;
+  }
+  
+  .benefit-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .benefit-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .benefit-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 }

@@ -58,9 +58,60 @@ img {
 }
 
 
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .app {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .app {
+    font-size: 0.9rem;
+  }
+  
+  /* Reduce animations on mobile for better performance */
+  * {
+    animation-duration: 0.2s !important;
+  }
+  
+  /* Ensure touch targets are large enough */
+  button, .nav-link, .cta-button, a {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    font-size: 0.85rem;
+  }
+  
+  /* Disable complex animations on small screens */
   * {
     animation: none !important;
-    transition: none !important;
+    transition: opacity 0.2s ease, transform 0.2s ease !important;
+  }
+  
+  /* Larger touch targets for mobile */
+  button, .nav-link, .cta-button, a {
+    min-height: 50px;
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .app {
+    filter: contrast(1.2);
   }
 }

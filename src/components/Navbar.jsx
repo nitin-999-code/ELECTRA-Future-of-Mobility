@@ -6,6 +6,7 @@ import TestDriveForm from './TestDriveForm';
 const Navbar = ({ activeTab, setActiveTab }) => {
   const [showTestDriveForm, setShowTestDriveForm] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleTestDriveSubmit = (formData) => {
@@ -18,16 +19,34 @@ const Navbar = ({ activeTab, setActiveTab }) => {
   const handleNavigation = (tab) => {
     setActiveTab(tab);
     navigate(`/${tab === 'home' ? '' : tab}`);
+    setIsMobileMenuOpen(false); // Close mobile menu after navigation
+  };
+
+  const handleLogoClick = () => {
+    setActiveTab('home');
+    navigate('/');
   };
 
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-brand">
+        <div className="navbar-brand" onClick={handleLogoClick}>
           <span className="brand-name">ELECTRA</span>
           <span className="brand-tagline">Future of Mobility</span>
         </div>
-        <div className="navbar-links">
+        
+        {/* Hamburger Menu Button */}
+        <button 
+          className={`hamburger-menu ${isMobileMenuOpen ? 'active' : ''}`}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <div className={`navbar-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           <button 
             className={`nav-link ${activeTab === 'home' ? 'active' : ''}`}
             onClick={() => handleNavigation('home')}
@@ -52,9 +71,19 @@ const Navbar = ({ activeTab, setActiveTab }) => {
           >
             Features
           </button>
+          <button 
+            className="cta-button mobile-cta"
+            onClick={() => {
+              setShowTestDriveForm(true);
+              setIsMobileMenuOpen(false);
+            }}
+          >
+            Book Test Drive
+          </button>
         </div>
+        
         <button 
-          className="cta-button"
+          className="cta-button desktop-cta"
           onClick={() => setShowTestDriveForm(true)}
         >
           Book Test Drive

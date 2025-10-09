@@ -156,3 +156,169 @@
 .search-button:hover {
   background: linear-gradient(90deg, #00b8e0, #2a6bc4);
 }
+
+.search-results {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.no-results p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .explore-header h1 {
+    margin-left: 200px;
+  }
+  
+  .upcoming-cars-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .explore-header {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .explore-header h1 {
+    margin-left: 0;
+    font-size: 2.2rem;
+  }
+  
+  .explore-header h1::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .upcoming-cars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .search-container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-more-upcoming {
+    padding: 1.5rem 3%;
+  }
+  
+  .explore-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .upcoming-cars-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .upcoming-car-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .search-container {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-box {
+    flex-direction: column;
+    border-radius: 15px;
+  }
+  
+  .search-input {
+    padding: 1rem;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .search-button {
+    padding: 1rem;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .car-name {
+    font-size: 1rem;
+    margin-top: -20px;
+  }
+  
+  .car-price {
+    font-size: 1.2rem;
+  }
+  
+  .car-specs {
+    font-size: 0.9rem;
+    margin-left: 0;
+  }
+  
+  .launch-date {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-more-upcoming {
+    padding: 1rem 2%;
+  }
+  
+  .explore-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .car-details {
+    padding: 1rem;
+  }
+  
+  .car-name {
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+  
+  .car-price {
+    font-size: 1.1rem;
+  }
+  
+  .car-specs {
+    font-size: 0.85rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .launch-date {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .search-input {
+    font-size: 0.9rem;
+  }
+  
+  .search-button {
+    font-size: 0.9rem;
+  }
+  
+  .search-results {
+    font-size: 0.9rem;
+  }
+  
+  .no-results p {
+    font-size: 1rem;
+  }
+}

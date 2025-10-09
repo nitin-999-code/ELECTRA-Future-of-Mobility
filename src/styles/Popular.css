@@ -159,34 +159,162 @@
 }
 
 @media (max-width: 1200px) {
+  .popular-container {
+    padding: 1.5rem 0;
+  }
+  
+  .popular-header {
+    padding: 0 3%;
+    margin-bottom: 2rem;
+  }
+  
+  .popular-header h2 {
+    font-size: 2.5rem;
+    left: 0;
+  }
+  
   .car-showcase-container {
     flex-direction: column;
+    padding: 0 3%;
+    gap: 2rem;
   }
   
   .car-list-sidebar {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0.8rem;
   }
   
   .car-list-item {
     flex: 1;
     min-width: 200px;
+    padding: 1.2rem;
   }
 
   .vertical-progress-container {
     display: none;
   }
+  
+  .car-specs {
+    padding: 0 3%;
+    gap: 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .popular-container {
+    padding: 1rem 0;
+  }
+  
+  .popular-header {
+    padding: 0 2%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .popular-header h2 {
+    font-size: 2rem;
+  }
+  
+  .car-showcase-container {
+    padding: 0 2%;
+    gap: 1.5rem;
+  }
+  
+  .car-visual {
+    height: 300px;
+  }
+  
+  .car-image {
+    width: 100%;
+  }
+  
+  .car-list-sidebar {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .car-list-item {
+    min-width: auto;
+    padding: 1rem;
+  }
+  
+  .car-list-name {
+    font-size: 1.1rem;
+  }
+  
+  .car-list-type {
+    font-size: 0.85rem;
+  }
+  
+  .car-list-description {
+    font-size: 0.85rem;
+    padding: 0.8rem 0 0;
+  }
+  
   .car-specs {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 2%;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .spec-item {
+    padding: 1.2rem;
+  }
+  
+  .spec-item span:first-child {
+    font-size: 0.8rem;
+  }
+  
+  .spec-item span:last-child {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
+  .popular-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .car-visual {
+    height: 250px;
+  }
+  
+  .car-list-item {
+    padding: 0.8rem;
+  }
+  
+  .car-list-name {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .car-list-type {
+    font-size: 0.8rem;
+  }
+  
+  .car-list-description {
+    font-size: 0.8rem;
+    padding: 0.6rem 0 0;
+    line-height: 1.4;
+  }
+  
   .car-specs {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+  
+  .spec-item {
+    padding: 1rem;
+  }
+  
+  .spec-item span:first-child {
+    font-size: 0.75rem;
+  }
+  
+  .spec-item span:last-child {
+    font-size: 1rem;
   }
 }

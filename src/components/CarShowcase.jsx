@@ -190,12 +190,21 @@ const CarShowcase = () => {
     }, 500);
   };
 
+  const cardsToShow = 4; // Number of cards visible at once
+  const totalCards = upcomingCars.length;
+  
   const nextUpcomingSlide = () => {
-    setUpcomingIndex(prev => (prev === upcomingCars.length - 1 ? 0 : prev + 1));
+    setUpcomingIndex(prev => {
+      const maxSlides = Math.max(0, totalCards - cardsToShow);
+      return prev >= maxSlides ? 0 : prev + 1;
+    });
   };
 
   const prevUpcomingSlide = () => {
-    setUpcomingIndex(prev => (prev === 0 ? upcomingCars.length - 1 : prev - 1));
+    setUpcomingIndex(prev => {
+      const maxSlides = Math.max(0, totalCards - cardsToShow);
+      return prev <= 0 ? maxSlides : prev - 1;
+    });
   };
 
   const handleAlertClick = () => {
@@ -245,13 +254,13 @@ const CarShowcase = () => {
           <div className="upcoming-slider">
             <div 
               className="upcoming-slider-track" 
-              style={{ transform: `translateX(-${upcomingIndex * 25}%)` }}
+              style={{ transform: `translateX(-${upcomingIndex * (100 / cardsToShow)}%)` }}
             >
               {upcomingCars.map((car, index) => (
                 <div 
                   key={index} 
                   className="upcoming-slide"
-                  style={{ width: `${100 / upcomingCars.length}%` }}
+                  style={{ width: `${100 / cardsToShow}%`, flexShrink: 0 }}
                 >
                   <div className="upcoming-card">
                     <div className="upcoming-image-container">

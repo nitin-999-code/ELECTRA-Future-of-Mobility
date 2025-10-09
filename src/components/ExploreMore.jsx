@@ -135,8 +135,29 @@ const ExploreMore = () => {
       specs: "500 km • 134 bhp • 48 kWh",
       launchDate: "Aug 10, 2025: Expected Launch",
       image: marutiVitara
+    },
+    {
+      name: "Tesla Model 3",
+      price: "₹50 Lakh",
+      specs: "555 km • 283 bhp • 75 kWh",
+      launchDate: "Available Now",
+      image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&h=600&fit=crop"
+    },
+    {
+      name: "Tesla Model S",
+      price: "₹1.5 Crore",
+      specs: "652 km • 670 bhp • 100 kWh",
+      launchDate: "Available Now",
+      image: "https://images.unsplash.com/photo-1617704548623-340376564e68?w=800&h=600&fit=crop"
     }
   ];
+
+  // Filter cars based on search query
+  const filteredCars = allCars.filter(car =>
+    car.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    car.specs.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    car.price.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <>
@@ -155,22 +176,33 @@ const ExploreMore = () => {
       <div className="explore-more-container">
         <div className="explore-header">
           <h1>All ElectricVehicles</h1>
+          {searchQuery && (
+            <p className="search-results">
+              {filteredCars.length} vehicle{filteredCars.length !== 1 ? 's' : ''} found for "{searchQuery}"
+            </p>
+          )}
         </div>
 
         <div className="upcoming-cars-grid">
-          {allCars.map((car, index) => (
-            <div key={index} className="upcoming-car-card">
-              <div className="car-image-container1">
-                <img src={car.image} alt={car.name} className="car-image1" />
+          {filteredCars.length > 0 ? (
+            filteredCars.map((car, index) => (
+              <div key={index} className="upcoming-car-card">
+                <div className="car-image-container1">
+                  <img src={car.image} alt={car.name} className="car-image1" />
+                </div>
+                <div className="car-details">
+                  <h2 className="car-name">{car.name}</h2>
+                  <p className="car-price">{car.price}</p>
+                  <p className="car-specs">{car.specs}</p>
+                  <p className="launch-date">{car.launchDate}</p>
+                </div>
               </div>
-              <div className="car-details">
-                <h2 className="car-name">{car.name}</h2>
-                <p className="car-price">{car.price}</p>
-                <p className="car-specs">{car.specs}</p>
-                <p className="launch-date">{car.launchDate}</p>
-              </div>
+            ))
+          ) : (
+            <div className="no-results">
+              <p>No vehicles found matching "{searchQuery}". Try a different search term.</p>
             </div>
-          ))}
+          )}
         </div>
       </div>
     </>
